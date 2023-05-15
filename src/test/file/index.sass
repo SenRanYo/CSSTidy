@@ -1,0 +1,92 @@
+// 混入
+@mixin button($background-color, $color) {
+  // 测试备注
+
+  // display: inline-block;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: $background-color;
+  color: $color;
+  // 边框样式
+  border: none; // border
+  border-radius: 5px; // border-radius
+}
+
+$secondary-color: #3498db; // 次要变量
+$primary-color: #2c3e50; // 主要变量
+
+// 导航
+nav {
+  background-color: $primary-color;
+
+  // 列表
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      // 显示类型
+      display: inline-block;
+
+      a {
+        color: $secondary-color; // 颜色
+      }
+    }
+  }
+
+  &.nav--center {
+    text-align: center;
+  }
+
+  &.nav--right {
+    text-align: right;
+  }
+}
+
+
+
+.btn-primary {
+  @include button($primary-color, white);
+}
+
+.btn-secondary {
+  @include button($secondary-color, white);
+}
+
+.btn-link {
+  @include button(transparent, $secondary-color);
+  color: $secondary-color;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  border: 1px solid red;
+}
+
+.success {
+  color: green;
+  border: 1px solid green;
+}
+
+.alert {
+  @extend .error;
+  background-color: #ffdce0;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+
+  &.card--primary {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &.card--secondary {
+    background-color: $secondary-color;
+    color: white;
+  }
+}
