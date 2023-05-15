@@ -1,6 +1,6 @@
 import Basic from './basic';
 import * as vscode from 'vscode';
-import { Configs, CssBlock } from '../types/index';
+import { Configs, CssBlock } from '@/types/index';
 
 
 export default class Embedded extends Basic {

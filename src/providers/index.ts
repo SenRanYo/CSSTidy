@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 import postcss from 'postcss';
-import Basic from '../providers/basic';
-import Embedded from '../providers/embedded';
-import postcssTidy from '../postcss/tidy/index';
+import Basic from '@/providers/editor/basic';
+import Embedded from '@/providers/editor/embedded';
+import postcssTidy from '@/postcss/tidy/index';
 
 import * as scssSyntax from 'postcss-scss';
 const lessSyntax = require('postcss-less');
