@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { Configs, CssBlock } from '@/types/index';
+import { Configs, CssBlock } from '@/types';
 
 export default class Basic {
   constructor(
